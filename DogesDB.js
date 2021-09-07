@@ -1,7 +1,7 @@
 const dogesArr = [
     {
         event: 'Vaccine',
-        image: require('./images/anime_doge.png'),
+        image: require('./assets/images/anime_doge.png'),
         eventId: 'DJ-1',
         description: `Cures cancer, covid, HIV, and every future disease that has yet to be discovered.`,
         shortDescription: 'Vax #1',
@@ -9,7 +9,7 @@ const dogesArr = [
     },
     {
         event: 'Vaccine',
-        image: require('./images/cool_doge.png'),
+        image: require('./assets/images/cool_doge.png'),
         eventId: 'SG-1',
         description: `Cures cancer, covid, HIV, and every future disease that has yet to be discovered.`,
         shortDescription: 'Vax #2',
@@ -17,7 +17,7 @@ const dogesArr = [
     },
     {
         event: 'Vaccine',
-        image: require('./images/russian_doge.png'),
+        image: require('./assets/images/russian_doge.png'),
         eventId: 'GT-1',
         description: `Cures cancer, covid, HIV, and every future disease that has yet to be discovered.`,
         shortDescription: 'Vax #3',
@@ -25,7 +25,7 @@ const dogesArr = [
     },
     {
         event: 'Vaccine',
-        image: require('./images/sleepy_doge.png'),
+        image: require('./assets/images/sleepy_doge.png'),
         eventId: 'BT-1',
         description: `Cures cancer, covid, HIV, and every future disease that has yet to be discovered.`,
         shortDescription: 'Vax #4',
@@ -33,7 +33,7 @@ const dogesArr = [
     },
     {
         event: 'Vaccine',
-        image: require('./images/space_doge.png'),
+        image: require('./assets/images/space_doge.png'),
         eventId: 'BT-2',
         description: `Cures cancer, covid, HIV, and every future disease that has yet to be discovered.`,
         shortDescription: 'Vax #4',

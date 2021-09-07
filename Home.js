@@ -7,13 +7,13 @@ const Home = (props) => {
         <View style={styles.container}>
             <Image
                 style={styles.dogelogo}
-                source={require('./images/doge_logo.png')}
+                source={require('./assets/images/doge_logo.png')}
                 />
                 <Text style={styles.title}>Welcome to DogeMENU</Text>
                 <Text style={styles.subtitle}>{props.username}</Text>
                 <Image 
                     style={styles.dogefamily}
-                    source={require('./images/family_doge.png')}
+                    source={require('./assets/images/family_doge.png')}
                 />
                 <View style={styles.textcontainer}>
                     <Text style={styles.content}>{introText}</Text>
