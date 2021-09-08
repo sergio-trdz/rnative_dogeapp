@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import dogesArr from './DogesDB';
 
-const Doges = () => {
+const Doges = ({navigation}) => {
 
     const dogeItem = ({item}) => {
 
@@ -32,9 +32,13 @@ const Doges = () => {
                     <Text style={styles.ticketshortdescription}>
                         {item.price}
                     </Text>
-                    <Text style={styles.ticketbutton}>
-                        GET TICKETS
-                    </Text>
+                    <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('TicketPurchase', {tickId: item.eventId})
+                        }}
+                    >
+                        <Text style={styles.ticketbutton}>GET TICKETS</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

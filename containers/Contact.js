@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Text, TextInput, View, StyleSheet, Alert } from 'react-native';
 
+//navigation prop because this component will be including in routing so it can make use of this prop
 const Contact = ({navigation}) => {
 
     const [formName, setFormName] = useState('Enter Name');
@@ -24,6 +25,8 @@ const Contact = ({navigation}) => {
             </Text>
             <TextInput 
                 style={styles.textinput}
+                //onChangeText prop accepts a function and call this function when the content
+                //of the input changes
                 onChangeText={name => setFormName(name)}
                 value={formName}
                 //capitalize first letter of every word
@@ -67,6 +70,37 @@ const Contact = ({navigation}) => {
                 numberOfLines={3}
                 selectTextOnFocus={true}
             />
+
+            <Button 
+                title='Contact Us'
+                color='#108090'
+                onPress={submit}
+            />
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    form: {
+        alignItems: 'center',
+        flexDirection: 'column',
+        padding: 18
+    },
+    textinput: {
+        borderWidth: 1,
+        fontFamily: 'Roboto-Regular',
+        width: '80%',
+        paddingBottom: 15
+    },
+    multitextinput: {
+        borderWidth: 1,
+        fontFamily: 'Roboto-Regular',
+        width: '90%',
+        height: 120,
+        marginBottom: 50
+    },labels: {
+        fontFamily: 'Roboto-Regular',
+    }
+});
+
+export default Contact;

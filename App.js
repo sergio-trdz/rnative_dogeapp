@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Doges from './Doges';
+import Contact from './containers/Contact';
+import TicketPurchase from './containers/TicketsPurchase';
 
 const Stack = createStackNavigator();
 
@@ -40,6 +42,7 @@ const App = () => {
                 //headerShown: false hidde the header
                 headerShown: false
               }}
+              //for props to pass down need an opening and closing tags for both sides
             >
               {(props) => <Home {...props} username='DogeMASTER' />}
             </Stack.Screen>
@@ -49,6 +52,26 @@ const App = () => {
               options={{
                 headerTitleAlign: 'center',
                 headerTitleStyle: {fontFamily: 'Roboto-Regular'}
+              }}
+            />
+            <Stack.Screen
+              name='Contact'
+              component={Contact}
+              options={{
+                headerTitleAlign: 'center',
+                headerTitleStyle: {fontFamily: 'Roboto-Regular'},
+                //overwrite the title and displays this
+                headerTitle: 'Contact Us for doges'
+              }}
+            />
+            <Stack.Screen
+              name='TicketPurchase'
+              component={TicketPurchase}
+              options={{
+                headerTitleAlign: 'center',
+                headerTitleStyle: {fontFamily: 'Roboto-Regular'},
+                //overwrite the title and displays this
+                headerTitle: 'Purchase DogeHearts'
               }}
             />
           </Stack.Navigator>
