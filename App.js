@@ -8,6 +8,7 @@ import Home from './Home';
 import Doges from './Doges';
 import Contact from './containers/Contact';
 import TicketPurchase from './containers/TicketsPurchase';
+import News from './containers/News';
 
 const Stack = createStackNavigator();
 
@@ -72,6 +73,16 @@ const App = () => {
                 headerTitleStyle: {fontFamily: 'Roboto-Regular'},
                 //overwrite the title and displays this
                 headerTitle: 'Purchase DogeHearts'
+              }}
+            />
+            <Stack.Screen
+              name='News'
+              component={News}
+              options={{
+                headerTitleAlign: 'center',
+                headerTitleStyle: {fontFamily: 'Roboto-Regular'},
+                //overwrite the title and displays this
+                headerTitle: 'Latest Dogenews'
               }}
             />
           </Stack.Navigator>

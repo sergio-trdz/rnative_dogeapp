@@ -4,6 +4,8 @@ import dogesArr from './DogesDB';
 
 const Doges = ({navigation}) => {
 
+    //used for flatlist
+    //item represents each item in the list
     const dogeItem = ({item}) => {
 
         return (

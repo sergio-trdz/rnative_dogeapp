@@ -8,6 +8,7 @@ const Contact = ({navigation}) => {
     const [formEmail, setFormEmail] = useState('Enter Email');
     const [formPhoneNumber, setFormPhoneNumber] = useState('Enter Phone Number');
     const [formMessage, setFormMessage] = useState('Whats on your mind');
+    console.log(formName)
 
     const submit = () => {
         if (!formName||!formEmail||!formMessage){
@@ -17,6 +18,7 @@ const Contact = ({navigation}) => {
             navigation.navigate('Home')
         }
     }
+    console.log(formName)
 
     return(
         <View style={styles.form}>
@@ -25,7 +27,7 @@ const Contact = ({navigation}) => {
             </Text>
             <TextInput 
                 style={styles.textinput}
-                //onChangeText prop accepts a function and call this function when the content
+                //onChangeText prop accepts a function and call this function when the content changes
                 //of the input changes
                 onChangeText={name => setFormName(name)}
                 value={formName}
@@ -74,6 +76,7 @@ const Contact = ({navigation}) => {
             <Button 
                 title='Contact Us'
                 color='#108090'
+                //onPress accepts a function that executes when the button is pressed
                 onPress={submit}
             />
         </View>
